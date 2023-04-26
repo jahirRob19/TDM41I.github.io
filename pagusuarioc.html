@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="fondo"style="height: 1000px;width: 1000px">
+<head>
+	<title>Trabajando con Bases de Datos</title>
+	<link rel="stylesheet" href="ejemplo.css">
+	
+</head>
+
+<body>
+	<div class="contenedortodo">
+		<div class="encabezado">    
+			<h1>Venta de componentes para computadora.</h1>
+		</div>
+
+			<div class="columnaizq">
+				
+				<h2>Captura de datos</h2> 
+				
+				<form name="registradatos" method="POST" action="InsertRegc.php"> 
+
+				<table id="tablareg"> 
+
+					<tr> 
+						<td class="left"> 
+							<label for="nombre">Nombre del cliente *</label> 
+						</td> 
+						<td class="right"> 
+							<input type="text" name="nombre" maxlength="50" size="30" id="nombre" required> 
+						</td> 
+					</tr> 
+    
+					<tr> 
+						<td class="left"> 
+							<label for="producto">Seleccione un producto *</label> 
+						</td> 
+						<td class="right"> 
+							<select name="producto" size="1" id="producto" required>
+								<option>Seleccione un producto</option>
+								<option value="Ram">Ram</option>
+                                <option value="Tarjeta Madre">Tarjeta Madre</option>
+                                <option value="CPU">CPU</option>
+                                <option value="Teclado">Teclado</option>
+                                <option value="Raton">Raton</option>
+                                <option value="Disco Duro">Disco Duro</option>
+							</select> 
+						</td> 
+					</tr> 
+
+					<tr> 
+						<td class="left"> 
+							<label for="cantidad">Cantidad *</label> 
+						</td> 
+						<td class="right"> 
+							<input  type="text" name="cantidad" maxlength="10" size="5" id="cantidad" value="0" required> 
+						</td> 
+					</tr> 
+
+					<tr>
+						<td class="left"> 
+							<label for="tipodepago">Tipo de Pago *</label> 
+						</td>
+     
+						<td class="right">
+							<input type="radio" name="tipodepago" value="efectivo" checked>Efectivo
+							<br>
+							<input type="radio" name="tipodepago" value="tcredito">Tarjeta de Credito
+							<br>
+							<input type="radio" name="tipodepago" value="cheque">Transferencia Electr&oacute;nica
+							<br>
+						</td>
+					</tr>
+
+					<tr> 
+						<td colspan="2" style="text-align:center"> 
+							<input type="submit" value="Enviar Registro">
+						</td> 
+					</tr> 
+
+					<tr> 
+						<td colspan="2" style="text-align:center"> 
+							<button id="BotonLista" class="float-left submit-button" >Ver la BD</button>
+							<script type="text/javascript">
+								document.getElementById("BotonLista").onclick = function () {
+								location.href = "ListadoTablac.php";
+								};
+							</script>
+
+							<button id="BotonElimina" disabled class="float-left submit-button" >Eliminar registro</button>
+							<script type="text/javascript">
+								document.getElementById("BotonElimina").onclick = function () {
+								location.href = "Ej37EliminaRegistro.php";
+								};
+							</script>
+							
+							<button id="BotonActualiza" disabled class="float-left submit-button" >Cambiar registro</button>
+							<script type="text/javascript">
+								document.getElementById("BotonActualiza").onclick = function () {
+								location.href = "Ej37ActualizaRegistro.php";
+								};
+							</script>
+						</td> 
+					</tr> 
+
+				</table> 
+
+				</form>
+				<br><br>
+				<button class="dropdown-item" type="button"><a href="inicio.html" target="_self"><font color="negro">Inicio</font></a></button>
+
+	</div> <!--cierra el div "contenedortodo"-->
+</body>
+</html>
